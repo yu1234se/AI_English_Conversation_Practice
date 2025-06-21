@@ -11,11 +11,7 @@ from audio_transcribe import AudioTranscriber
 from kokoro import KPipeline
 from conversation_agent import generate_response
 
-# 設定
-AUDIOS_DIR = 'ai-podcaster/audios/'
 
-# ディレクトリ作成
-os.makedirs(AUDIOS_DIR, exist_ok=True)
 
 def generate_audio(pipeline, text, speed=1.0):
     """音声を生成してバイト列を返す（速度調整付き）"""

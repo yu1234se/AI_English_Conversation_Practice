@@ -1,0 +1,2 @@
+# AI_English_Conversation_Practice
+Kokoro、Whisper、LangChain、Gemma 3を活用した英会話練習アプリケーション

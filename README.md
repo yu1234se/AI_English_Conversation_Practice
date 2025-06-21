@@ -62,7 +62,7 @@ Whisperモデルを使用した音声認識処理を行います。
 ## インストール方法
 ```bash
 # リポジトリをクローン
-git clone [https://github.com/your-username/ai-english-practice.git](https://github.com/yu1234se/AI_English_Conversation_Practice.git)
+git clone https://github.com/your-username/ai-english-practice.git
 
 # 依存ライブラリをインストール
 pip install -r requirements.txt

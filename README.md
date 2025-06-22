@@ -1,5 +1,5 @@
 # AI英会話練習アプリケーション - README
-
+![app1A](https://github.com/user-attachments/assets/d3941774-e2bd-4948-a0f2-ff742a3e8b21)
 ## 概要
 このプロジェクトはKokoro、Whisper、LangChain、Gemma 3を活用した英会話練習アプリケーションで、インタラクティブな言語学習体験を提供します。システムの主な機能は以下の通りです：
 1. 英語で音声を録音
@@ -95,4 +95,4 @@ streamlit run app.py
 - **音質の問題**: 録音時の背景ノイズを軽減
 
 ## ライセンス
-このプロジェクトはMITライセンスのもとで公開されています - [LICENSE](LICENSE) ファイルを参照してください。![app1A](https://github.com/user-attachments/assets/d3941774-e2bd-4948-a0f2-ff742a3e8b21)
+このプロジェクトはMITライセンスのもとで公開されています - [LICENSE](LICENSE) ファイルを参照してください。

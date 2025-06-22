@@ -75,10 +75,10 @@ streamlit run app.py
 ```
 
 2. ブラウザで操作:
-   - 「🎤 Start Recording」をクリックして発声
+   - 「🎤 Start Recording」をクリックして録音
    - 終了後「⏹️ Stop Recording」をクリック
-   - 「Transcribe and Send」で音声処理
-   - AIの音声応答を聴く
+   - 「Transcribe and Send」で音声処理&ローカルLLMへの質問を連携
+   - 完了後にAIの音声応答を聴く
    - サイドバーのスライダーで音声速度を調整
 
 ## 設定オプション

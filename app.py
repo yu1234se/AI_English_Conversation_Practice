@@ -1,5 +1,7 @@
 import base64
 import os
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"  # これを追加
+
 import re
 import io
 import tempfile

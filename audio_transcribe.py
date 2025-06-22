@@ -26,26 +26,21 @@ class AudioTranscriber:
             list: 各セグメントの開始時刻、終了時刻、正規化されたテキストを含むリスト。
                   例: [[開始時刻1, 終了時刻1, "テキスト1"], [開始時刻2, 終了時刻2, "テキスト2"], ...]
         """
+        # VADパラメータ設定（最新APIに合わせて修正）
+        vad_parameters = VadOptions(
+            min_speech_duration_ms=100,  # 最小の音声継続時間（ミリ秒）
+            speech_pad_ms=100,           # 音声区間の前後に追加するパディング（ミリ秒）
+            threshold=0.25,              # 音声と判断するための閾値
+            # neg_thresholdパラメータは新しいバージョンでは削除されました
+        )
+        
         # 音声ファイルを書き起こします。
-        # language="en": 英語として処理します。
-        # beam_size=5: ビームサーチのサイズ。値を大きくすると精度が向上する可能性がありますが、処理時間が長くなります。
-        # vad_filter=True: 音声活動検出 (VAD) フィルターを有効にし、無音区間をスキップします。
-        # vad_parameters: VADフィルターの詳細設定。
-        #   min_speech_duration_ms: 最小の音声継続時間 (ミリ秒)。これより短い音声は無視されます。
-        #   speech_pad_ms: 音声区間の前後に追加するパディング時間 (ミリ秒)。
-        #   threshold: 音声と判断するための閾値。
-        #   neg_threshold: 無音と判断するための閾値。
         segments, info = self.model.transcribe(
             wav_path,
             language="en",  # 英語として設定
             beam_size=5,
             vad_filter=True,
-            vad_parameters=VadOptions(
-                min_speech_duration_ms=100,
-                speech_pad_ms=100,
-                threshold=0.25,
-                neg_threshold=0.2,
-            )
+            vad_parameters=vad_parameters
         )
         
         # 書き起こし結果を収集します。
